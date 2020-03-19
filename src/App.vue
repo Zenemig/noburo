@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav id="nav">
+      <router-link to="/">?</router-link>
+      <router-link to="/trabajos">Trabajos</router-link>
+      <router-link to="/contacto">Contacto</router-link>
+    </nav>
     <router-view />
   </div>
 </template>
@@ -21,11 +22,11 @@
   padding: 30px;
 
   a {
-    font-weight: bold;
+    display: block;
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      font-weight: bold;
     }
   }
 }
