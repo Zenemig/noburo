@@ -30,7 +30,6 @@ export default {
   methods: {
     async fetchData() {
       const { data } = await api.get(`cdn/stories/${this.$route.params.slug}`);
-      console.log(data);
       this.info = data.story.content;
     }
   }
