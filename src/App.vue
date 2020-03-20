@@ -9,7 +9,7 @@
       <router-link to="/trabajos" class="nav__link">Trabajos</router-link>
       <router-link to="/contacto" class="nav__link">Contacto</router-link>
     </nav>
-    <router-view />
+    <main><router-view /></main>
   </div>
 </template>
 

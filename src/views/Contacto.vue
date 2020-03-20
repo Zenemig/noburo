@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <section class="contact">
     <a href="mailto:hola@noburo.cl" class="contact__email">
       hola@noburo.cl
     </a>
@@ -17,7 +17,7 @@
         Twitter
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">

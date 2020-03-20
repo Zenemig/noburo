@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <router-link
       v-for="trabajo in trabajos"
       :key="trabajo.id"
@@ -14,7 +14,7 @@
     >
       {{ trabajo.name }}
     </router-link>
-  </div>
+  </section>
 </template>
 
 <script>
