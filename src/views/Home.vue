@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <section class="home">
     <p>
       <strong>NO BÜRO</strong> es un estudio independiente de diseño gráfico
       ubicado en Santiago, Chile.
@@ -25,7 +25,7 @@
       información mediante un concepto visual, elección tipográfica o
       diagramación de una página.
     </p>
-  </div>
+  </section>
 </template>
 
 <script>

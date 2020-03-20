@@ -1,33 +1,66 @@
 <template>
   <div id="app">
-    <nav id="nav">
-      <router-link to="/">?</router-link>
-      <router-link to="/trabajos">Trabajos</router-link>
-      <router-link to="/contacto">Contacto</router-link>
+    <nav id="nav" class="nav">
+      <figure class="nav__logo">
+        <img src="./assets/noburo_logo.svg" />
+      </figure>
+
+      <router-link to="/" class="nav__link">?</router-link>
+      <router-link to="/trabajos" class="nav__link">Trabajos</router-link>
+      <router-link to="/contacto" class="nav__link">Contacto</router-link>
     </nav>
-    <router-view />
+    <main><router-view /></main>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap");
+
+// Base
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-#nav {
-  padding: 30px;
+body {
+  padding: 0 28px;
+  background-color: #fff4e6;
+  color: black;
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+}
 
-  a {
-    display: block;
-    color: #2c3e50;
+figure {
+  margin: 0;
+}
 
-    &.router-link-exact-active {
-      font-weight: bold;
-    }
+// Header
+.nav {
+  margin: 17px 0 0 0;
+  padding-bottom: 13px;
+  border-bottom: 1px solid black;
+}
+
+.nav__logo {
+  margin-bottom: 12px;
+}
+
+.nav__link {
+  display: block;
+  color: black;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    font-style: italic;
+  }
+  &.router-link-exact-active {
+    font-weight: bold;
+    font-style: italic;
   }
 }
 </style>

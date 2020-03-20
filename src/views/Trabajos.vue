@@ -1,22 +1,20 @@
 <template>
-  <div class="trabajos">
-    <h1>Trabajos</h1>
-    <ul>
-      <li v-for="trabajo in trabajos" :key="trabajo.id">
-        <router-link
-          :to="{
-            name: 'Trabajo',
-            params: {
-              slug: trabajo.slug,
-              trabajo: trabajo
-            }
-          }"
-        >
-          {{ trabajo.name }}
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <section>
+    <router-link
+      v-for="trabajo in trabajos"
+      :key="trabajo.id"
+      :to="{
+        name: 'Trabajo',
+        params: {
+          slug: trabajo.slug,
+          trabajo: trabajo
+        }
+      }"
+      class="job"
+    >
+      {{ trabajo.name }}
+    </router-link>
+  </section>
 </template>
 
 <script>
@@ -40,3 +38,17 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.job {
+  display: block;
+  padding: 13px 0;
+  border-bottom: 1px solid black;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+</style>

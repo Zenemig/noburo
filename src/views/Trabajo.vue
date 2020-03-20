@@ -1,13 +1,31 @@
 <template>
-  <div class="trabajo">
-    <h1>{{ info.title }}</h1>
-    <p>{{ info.type }}</p>
-    <p>Cliente</p>
-    <p>{{ info.client }}</p>
-    <figure v-for="(image, index) in info.work" :key="index">
-      <img :src="image.filename" />
-    </figure>
-  </div>
+  <article class="job-info">
+    <header>
+      <h1 class="job-info__title">
+        {{ info.title }}
+      </h1>
+
+      <p class="job-info__details">
+        <strong>{{ info.type }}</strong>
+        <br />
+
+        <strong><em>Cliente</em></strong>
+        <br />
+
+        {{ info.client }}
+      </p>
+    </header>
+
+    <section>
+      <figure
+        v-for="(image, index) in info.work"
+        :key="index"
+        class="job-info__image"
+      >
+        <img :src="image.filename" />
+      </figure>
+    </section>
+  </article>
 </template>
 
 <script>
@@ -35,3 +53,24 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.job-info__title {
+  margin: 0;
+  padding: 11px 0;
+  border-bottom: 1px solid black;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.job-info__details {
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid black;
+}
+
+.job-info__image {
+  margin: 15px 0;
+}
+</style>
