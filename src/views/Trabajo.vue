@@ -16,13 +16,13 @@
       </p>
     </header>
 
-    <section>
+    <section class="job-info__content">
       <figure
         v-for="(image, index) in info.work"
         :key="index"
         class="job-info__image"
       >
-        <img :src="image.filename" />
+        <img :src="image.filename" class="image" />
       </figure>
     </section>
   </article>
@@ -70,7 +70,30 @@ export default {
   border-bottom: 1px solid black;
 }
 
+.job-info__content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 .job-info__image {
+  flex: 1 1 100%;
   margin: 15px 0;
+  width: 100%;
+  @media (min-width: 600px) {
+    flex: 0 0 calc(50% - (15px / 2));
+    width: calc(50% - (15px / 2));
+    &:nth-child(odd) {
+      margin-right: 15px;
+    }
+  }
+  .image {
+    width: 100%;
+  }
 }
 </style>

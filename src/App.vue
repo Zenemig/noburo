@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="wrapper">
     <nav id="nav" class="nav">
       <figure class="nav__logo">
         <img src="./assets/noburo_logo.svg" />
@@ -27,11 +27,17 @@ html {
 }
 
 body {
+  margin: 0;
   padding: 0 28px;
   background-color: #fff4e6;
   color: black;
   font-family: "Space Mono", monospace;
   font-size: 15px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 figure {
